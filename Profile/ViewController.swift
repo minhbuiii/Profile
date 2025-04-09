@@ -9,9 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var avatarProfileLogo: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        avatarProfileLogo.layer.cornerRadius = avatarProfileLogo.frame.size.width / 2
+        avatarProfileLogo.layer.borderWidth = 3.0
+        avatarProfileLogo.layer.borderColor = UIColor.lightGray.cgColor
+        avatarProfileLogo.clipsToBounds = true // hoặc imageView.layer.masksToBounds = true
     }
 
 
